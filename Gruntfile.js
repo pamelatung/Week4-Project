@@ -16,13 +16,13 @@ module.exports = function(grunt) {
    	  tasks: ['sass', 'autoprefixer'],
    	  options: {
    	  livereload : true
-   	}
-   },
-   jade: {
-      files: ['dev/templates/*.jade'],
-      tasks: ['jade'],
-      options: {
-         livereload: true
+   	  }
+      },
+      jade: {
+         files: ['dev/templates/*.jade'],
+         tasks: ['jade'],
+         options: {
+            livereload: true
       }
    }
 },
