@@ -6,7 +6,7 @@ module.exports = function(grunt) {
    sass: {
    	dist: {
    		files: {
-   			'dist/style.css' : 'dev/style.css'
+   			'dist/style.css' : 'dev/style.scss'
    		}
    	}
    },
@@ -15,14 +15,14 @@ module.exports = function(grunt) {
    	  files: ['dev/*.scss'],
    	  tasks: ['sass', 'autoprefixer'],
    	  options: {
-   	  livereload : true
+   	  livereload : true,
    	  }
       },
       jade: {
          files: ['dev/templates/*.jade'],
          tasks: ['jade'],
          options: {
-            livereload: true
+            livereload: true,
       }
    }
 },

@@ -1,0 +1,37 @@
+
+$light: #FFF;
+$dark: #000;
+$h1-size: 65px;
+$h2-ff: 'Raleway', Helvetica, Arial, sans-serif;
+$h2-size: 20px;
+
+.hero {
+	margin: 200px auto 25px;
+	text-align:center;
+		h2 {
+			color:$light;
+			width: 50%;
+			border-top:1px dotted $light;
+			padding-top: 50px;
+			letter-spacing: 2px;
+			text-align: center;
+			margin:0 auto;
+		}
+}
+
+h1 {
+	font-size: $h1-size;
+	color: $light;
+	font-weight: lighter;
+	margin: 35px 0;
+	letter-spacing: 10px;
+	text-align: center;
+	text-transform: uppercase;
+}
+h2 {
+	font-family: $h2-ff;
+	font-size: $h2-size;
+	font-weight: 200;
+	color:$dark;
+	text-transform: uppercase;
+}

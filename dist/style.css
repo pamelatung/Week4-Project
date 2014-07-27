@@ -1,0 +1,418 @@
+@import url(http://fonts.googleapis.com/css?family=Pinyon+Script|Raleway);
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: \201C \201D \2018 \2019; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button, input {
+  line-height: normal; }
+
+button, html input[type=button],
+input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default; }
+
+input[type=checkbox], input[type=radio] {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, figure {
+  margin: 0; }
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+* html .clearfix {
+  zoom: 1; }
+
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1; }
+
+/* IE7 */
+.hero {
+  margin: 200px auto 25px;
+  text-align: center; }
+  .hero h2 {
+    color: white;
+    width: 50%;
+    border-top: 1px dotted white;
+    padding-top: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 0 auto; }
+
+h1 {
+  font-size: 65px;
+  color: white;
+  font-weight: lighter;
+  margin: 35px 0;
+  letter-spacing: 10px;
+  text-align: center;
+  text-transform: uppercase; }
+
+h2 {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  color: black;
+  text-transform: uppercase; }
+
+body {
+  background: url(../dist/images/scenic/trees-1-bw.jpg);
+  background-size: 100%;
+  background-attachment: fixed;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; }
+
+/* Social media icons in Header */
+.hero img {
+  width: 30px;
+  margin: 10px 5px; }
+
+.hero .container {
+  margin-top: 100px; }
+
+/*== PROFILE SECTION ==*/
+.about,
+.profile,
+.gallery,
+.contact {
+  padding: 20px 0; }
+
+.profile {
+  background: #fff;
+  padding: 75px 0 85px 0;
+  margin: 0; }
+
+.prSide {
+  line-height: 1.75;
+  background: #FFF;
+  width: 62%;
+  padding: 10px;
+  margin-right: 5%;
+  float: left; }
+
+/* Personal Intro Text */
+.profile img {
+  width: 25%;
+  border-radius: 8px;
+  margin: 30px 0 0 10px;
+  float: left; }
+
+/* ABOUT SECTION: 3-PART DIV WITH ICONS */
+.about {
+  background: rgba(176, 196, 222, 0.5);
+  line-height: 1.75;
+  padding: 50px 0 40px 0;
+  color: #FFF; }
+
+.about1,
+.about2,
+.about3 {
+  width: 33%;
+  padding: 25px;
+  text-align: center;
+  float: left; }
+
+.about2 {
+  border-left: 1px dotted grey;
+  border-right: 1px dotted grey; }
+
+.about img {
+  width: 100px;
+  padding-bottom: 5px;
+  -webkit-filter: invert(100%); }
+
+/* Icon Dimensions*/
+/*== GALLERY SECTION ==*/
+.gallery1,
+.gallery2,
+.gallery3,
+.gallery4,
+.gallery5,
+.gallery6 {
+  width: 33%;
+  padding: 45px 10px;
+  float: left; }
+
+.gallery {
+  background: #FFF;
+  padding: 45px 0 35px 0;
+  text-align: center; }
+
+.gallery img {
+  width: 75%;
+  border-radius: 8px; }
+
+/*== CONTACT SOCIAL MEDIA SECTION ==*/
+.contact {
+  background: rgba(0, 0, 0, 0.1);
+  text-align: center; }
+
+.contact h2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #FFF;
+  text-align: center;
+  text-transform: uppercase; }
+
+.contact img {
+  width: 50px;
+  margin: 10px 20px; }
+
+/*Icon Dimensions*/
+/*== FOOTER SECTION (Copyright blurb) ==*/
+footer {
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  color: #FFF;
+  padding: 1px 0; }
+
+.container {
+  width: 1000px;
+  margin: 0 auto; }
+
+.clearfix {
+  clear: both; }
+
+/*================
+RESPONSIVE
+================*/
+@media (max-width: 1136px) {
+  body {
+    background: url(images/scenic/trees-1-bw-tablet.jpg);
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-color: #666;
+    font-size: 14px; }
+
+  .profile {
+    padding: 45px 0; }
+
+  .prSide {
+    float: none;
+    width: 100%;
+    margin: 0 auto; }
+
+  .profile img {
+    display: block;
+    float: none;
+    width: 30%;
+    margin: 0 auto; } }
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
+    margin: 0 auto; }
+
+  h1 {
+    font-size: 40px;
+    letter-spacing: 7px; }
+
+  .hero h2 {
+    font-size: 16px;
+    padding: 50px 0; }
+
+  .hero .container {
+    width: 100%;
+    margin: 0 auto; }
+
+  .profile {
+    padding: 45px 0; }
+
+  .profile img {
+    width: 30%; }
+
+  .about {
+    padding: 20px 0;
+    margin: 0 auto;
+    background: rgba(176, 196, 222, 0.5); }
+
+  .about1,
+  .about2,
+  .about3 {
+    float: none;
+    width: 85%;
+    padding: 25px;
+    margin: 0 auto;
+    border: none;
+    text-align: center; }
+
+  .contact img {
+    width: 30px;
+    margin: 10px 20px; }
+
+  footer {
+    font-size: 12px; } }
+@media (max-width: 480px) {
+  body {
+    background: url(images/scenic/trees-1-bw-mobile.jpg);
+    background-attachment: scroll;
+    background-repeat: no-repeat; }
+
+  .container {
+    width: 90%;
+    margin: 0 auto; }
+
+  h1 {
+    font-size: 25px;
+    letter-spacing: 5px; }
+
+  h2 {
+    font-size: 18px; }
+
+  .hero {
+    height: 300px;
+    margin: 150px auto 25px; }
+
+  .hero h2 {
+    font-size: 14px;
+    padding: 35px 0; }
+
+  .profile {
+    padding: 45px 0; }
+
+  .prSide {
+    float: none;
+    width: 100%;
+    margin: 0 auto; }
+
+  .profile img {
+    float: none;
+    width: 40%;
+    margin: 0 auto; }
+
+  .about {
+    padding: 20px 0;
+    margin: 0 auto;
+    background: rgba(176, 196, 222, 0.5); }
+
+  .about1,
+  .about2,
+  .about3 {
+    width: 95%; }
+
+  .hero img {
+    width: 25px;
+    margin: 10px 5px; }
+
+  .contact img {
+    width: 25px;
+    margin: 10px 20px; }
+
+  footer {
+    font-size: 12px; } }
