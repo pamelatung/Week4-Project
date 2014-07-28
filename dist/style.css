@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Pinyon+Script|Raleway);
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
 
@@ -172,6 +171,7 @@ body {
   background-attachment: fixed;
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
+  color: #575757;
   margin: 0; }
 
 * {
@@ -183,36 +183,49 @@ body {
 .hero img {
   width: 30px;
   margin: 10px 5px; }
-
 .hero .container {
   margin-top: 100px; }
 
 /*== PROFILE SECTION ==*/
 .about,
-.profile,
-.gallery,
-.contact {
+.gallery {
   padding: 20px 0; }
 
 .profile {
+  width: 100%;
   background: #fff;
-  padding: 75px 0 85px 0;
+  padding: 0;
   margin: 0; }
 
 .prSide {
   line-height: 1.75;
-  background: #FFF;
+  background: #DDEBE8;
   width: 62%;
-  padding: 10px;
-  margin-right: 5%;
+  padding: 21.5px 50px;
   float: left; }
 
 /* Personal Intro Text */
-.profile img {
-  width: 25%;
-  border-radius: 8px;
-  margin: 30px 0 0 10px;
+.prImage {
+  background: url("images/myphotos/profile-9-small.jpg");
+  background-size: 100%;
+  background-position: -20px -40px;
+  width: 38%;
+  margin: 0;
+  padding: 0;
   float: left; }
+  .prImage img {
+    -webkit-opacity: 0; }
+
+.blurb {
+  width: 100%;
+  padding: 50px 0 50px 0;
+  background: white;
+  font-family: "Raleway", Helvetica Neue, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  color: #CCC;
+  text-align: center;
+  text-transform: uppercase; }
 
 /* ABOUT SECTION: 3-PART DIV WITH ICONS */
 .about {
@@ -220,199 +233,228 @@ body {
   line-height: 1.75;
   padding: 50px 0 40px 0;
   color: #FFF; }
-
-.about1,
-.about2,
-.about3 {
-  width: 33%;
-  padding: 25px;
-  text-align: center;
-  float: left; }
+  .about img {
+    width: 100px;
+    padding-bottom: 5px;
+    -webkit-filter: invert(100%); }
+  .about .about1,
+  .about .about2,
+  .about .about3 {
+    width: 33%;
+    padding: 25px;
+    text-align: center;
+    float: left; }
 
 .about2 {
   border-left: 1px dotted grey;
   border-right: 1px dotted grey; }
 
-.about img {
-  width: 100px;
-  padding-bottom: 5px;
-  -webkit-filter: invert(100%); }
-
-/* Icon Dimensions*/
 /*== GALLERY SECTION ==*/
+.galleryTitle {
+  width: 100%;
+  padding: 50px 0 10px 0;
+  background: white;
+  font-family: "Raleway", Helvetica Neue, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  color: #CCC;
+  text-align: center;
+  text-transform: uppercase; }
+
 .gallery1,
 .gallery2,
-.gallery3,
+.gallery3 {
+  width: 33%;
+  padding: 0 10px 45px 10px;
+  float: left; }
+
 .gallery4,
 .gallery5,
 .gallery6 {
   width: 33%;
-  padding: 45px 10px;
+  padding: 45px 10px 45px 10px;
   float: left; }
 
 .gallery {
   background: #FFF;
   padding: 45px 0 35px 0;
   text-align: center; }
-
-.gallery img {
-  width: 75%;
-  border-radius: 8px; }
+  .gallery img {
+    width: 75%;
+    border-radius: 50%; }
 
 /*== CONTACT SOCIAL MEDIA SECTION ==*/
 .contact {
+  width: 100%;
   background: rgba(0, 0, 0, 0.1);
-  text-align: center; }
-
-.contact h2 {
-  font-size: 18px;
-  font-weight: 400;
-  color: #FFF;
   text-align: center;
-  text-transform: uppercase; }
-
-.contact img {
-  width: 50px;
-  margin: 10px 20px; }
-
-/*Icon Dimensions*/
-/*== FOOTER SECTION (Copyright blurb) ==*/
-footer {
-  background: rgba(0, 0, 0, 0.5);
-  font-size: 18px;
-  color: #FFF;
-  padding: 1px 0; }
-
-.container {
-  width: 1000px;
-  margin: 0 auto; }
-
-.clearfix {
-  clear: both; }
-
-/*================
-RESPONSIVE
-================*/
-@media (max-width: 1136px) {
-  body {
-    background: url(images/scenic/trees-1-bw-tablet.jpg);
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    background-color: #666;
-    font-size: 14px; }
-
-  .profile {
-    padding: 45px 0; }
-
-  .prSide {
-    float: none;
-    width: 100%;
-    margin: 0 auto; }
-
-  .profile img {
-    display: block;
-    float: none;
-    width: 30%;
-    margin: 0 auto; } }
-@media (max-width: 767px) {
-  .container {
-    width: 90%;
-    margin: 0 auto; }
-
-  h1 {
-    font-size: 40px;
-    letter-spacing: 7px; }
-
-  .hero h2 {
-    font-size: 16px;
-    padding: 50px 0; }
-
-  .hero .container {
-    width: 100%;
-    margin: 0 auto; }
-
-  .profile {
-    padding: 45px 0; }
-
-  .profile img {
-    width: 30%; }
-
-  .about {
-    padding: 20px 0;
-    margin: 0 auto;
-    background: rgba(176, 196, 222, 0.5); }
-
-  .about1,
-  .about2,
-  .about3 {
-    float: none;
-    width: 85%;
-    padding: 25px;
-    margin: 0 auto;
-    border: none;
-    text-align: center; }
-
+  /*== FOOTER SECTION (Copyright blurb) ==*/
+  /*================
+  RESPONSIVE
+  ================*/ }
+  .contact .contactSocial {
+    width: 62%;
+    float: left;
+    padding: 67.5px 0;
+    background: rgba(255, 255, 255, 0.1); }
+  .contact .contactForm {
+    width: 38%;
+    float: left;
+    padding: 30px 50px;
+    background: #E0D8CE; }
+  .contact h2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFF;
+    text-align: center;
+    text-transform: uppercase; }
   .contact img {
-    width: 30px;
+    width: 50px;
     margin: 10px 20px; }
-
-  footer {
-    font-size: 12px; } }
-@media (max-width: 480px) {
-  body {
-    background: url(images/scenic/trees-1-bw-mobile.jpg);
-    background-attachment: scroll;
-    background-repeat: no-repeat; }
-
-  .container {
-    width: 90%;
-    margin: 0 auto; }
-
-  h1 {
-    font-size: 25px;
-    letter-spacing: 5px; }
-
-  h2 {
-    font-size: 18px; }
-
-  .hero {
-    height: 300px;
-    margin: 150px auto 25px; }
-
-  .hero h2 {
+  .contact form.contact {
+    width: 60%;
+    margin: 0 auto;
+    padding: 50px 0;
+    border-radius: 5px;
+    font-family: "Raleway", Helvetica Neue, Arial, sans-serif;
     font-size: 14px;
-    padding: 35px 0; }
-
-  .profile {
-    padding: 45px 0; }
-
-  .prSide {
-    float: none;
+    background: none; }
+  .contact input.firstName,
+  .contact input.lastName,
+  .contact input.email,
+  .contact textarea.message {
+    display: block;
     width: 100%;
+    color: #E3E3E3;
+    margin: 0 0 20px 0;
+    padding: 12px;
+    border: 1px solid #EEE;
+    border-radius: 2px;
+    background: none; }
+    .contact input.firstName:focus,
+    .contact input.lastName:focus,
+    .contact input.email:focus,
+    .contact textarea.message:focus {
+      border-color: red;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      outline: none; }
+  .contact .submit {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 200;
+    color: #e3e3e3;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 3px; }
+    .contact .submit:hover {
+      background: rgba(255, 255, 255, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #333; }
+  .contact footer {
+    background: rgba(0, 0, 0, 0.75);
+    font-size: 14px;
+    color: #FFF;
+    padding-left: 20px; }
+  .contact .container {
+    width: 1000px;
     margin: 0 auto; }
-
-  .profile img {
-    float: none;
-    width: 40%;
-    margin: 0 auto; }
-
-  .about {
-    padding: 20px 0;
-    margin: 0 auto;
-    background: rgba(176, 196, 222, 0.5); }
-
-  .about1,
-  .about2,
-  .about3 {
-    width: 95%; }
-
-  .hero img {
-    width: 25px;
-    margin: 10px 5px; }
-
-  .contact img {
-    width: 25px;
-    margin: 10px 20px; }
-
-  footer {
-    font-size: 12px; } }
+  .contact .clearfix {
+    clear: both; }
+  @media (max-width: 1136px) {
+    .contact body {
+      background: url(images/scenic/trees-1-bw-tablet.jpg);
+      background-attachment: scroll;
+      background-repeat: no-repeat;
+      background-color: #666;
+      font-size: 14px; }
+    .contact .profile {
+      padding: 45px 0; }
+    .contact .prSide {
+      float: none;
+      width: 100%;
+      margin: 0 auto; }
+    .contact .profile img {
+      display: block;
+      float: none;
+      width: 30%;
+      margin: 0 auto; } }
+  @media (max-width: 767px) {
+    .contact .container {
+      width: 90%;
+      margin: 0 auto; }
+    .contact h1 {
+      font-size: 40px;
+      letter-spacing: 7px; }
+    .contact .hero h2 {
+      font-size: 16px;
+      padding: 50px 0; }
+    .contact .hero .container {
+      width: 100%;
+      margin: 0 auto; }
+    .contact .profile {
+      padding: 45px 0; }
+    .contact .profile img {
+      width: 30%; }
+    .contact .about {
+      padding: 20px 0;
+      margin: 0 auto;
+      background: rgba(176, 196, 222, 0.5); }
+    .contact .about1,
+    .contact .about2,
+    .contact .about3 {
+      float: none;
+      width: 85%;
+      padding: 25px;
+      margin: 0 auto;
+      border: none;
+      text-align: center; }
+    .contact .contact img {
+      width: 30px;
+      margin: 10px 20px; }
+    .contact footer {
+      font-size: 12px; } }
+  @media (max-width: 480px) {
+    .contact body {
+      background: url(images/scenic/trees-1-bw-mobile.jpg);
+      background-attachment: scroll;
+      background-repeat: no-repeat; }
+    .contact .container {
+      width: 90%;
+      margin: 0 auto; }
+    .contact h1 {
+      font-size: 25px;
+      letter-spacing: 5px; }
+    .contact h2 {
+      font-size: 18px; }
+    .contact .hero {
+      height: 300px;
+      margin: 150px auto 25px; }
+    .contact .hero h2 {
+      font-size: 14px;
+      padding: 35px 0; }
+    .contact .profile {
+      padding: 45px 0; }
+    .contact .prSide {
+      float: none;
+      width: 100%;
+      margin: 0 auto; }
+    .contact .profile img {
+      float: none;
+      width: 40%;
+      margin: 0 auto; }
+    .contact .about {
+      padding: 20px 0;
+      margin: 0 auto;
+      background: rgba(176, 196, 222, 0.5); }
+    .contact .hero img {
+      width: 25px;
+      margin: 10px 5px; }
+    .contact .contact img {
+      width: 25px;
+      margin: 10px 20px; }
+    .contact footer {
+      font-size: 12px; } }

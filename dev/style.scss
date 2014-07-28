@@ -2,49 +2,97 @@
 @import "templates/includes/clearfix";
 @import "templates/includes/header";
 @import "templates/includes/body-styles";
-@import url(http://fonts.googleapis.com/css?family=Pinyon+Script|Raleway);
+
+$font-special:'Raleway',Helvetica Neue, Arial, sans-serif;
+
+@mixin profileText($width) {
+	line-height: 1.75;
+	background: #DDEBE8;
+	width: $width;
+	padding: 21.5px 50px;
+	float: left;
+}
+
+@mixin profileImg($width) {
+	background:url('images/myphotos/profile-9-small.jpg');
+	background-size: 100%;
+	background-position: -20px -40px;
+	width: $width;
+	margin:0;
+	padding:0;
+	float: left;
+}
+
+@mixin blurb($bkg, $fontsize, $padtop, $padbottom) {
+	width: 100%;
+	padding: $padtop 0 $padbottom 0;
+	background:$bkg;
+	font-family: $font-special;
+	font-size: $fontsize;
+	font-weight: 200;
+	color:#CCC;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+@mixin about($width) {
+	width: $width;
+	padding:25px;
+	text-align: center;
+	float: left;
+}
+
+@mixin gallery($width,$padtop,$padbottom) {
+	width: $width;
+	padding:$padtop 10px $padbottom 10px;
+	float: left;
+}
+
+@mixin galleryItem($width) {
+	width: $width;
+	border-radius: 50%;
+}
 
 * {
 			box-sizing:border-box;
 	}
 
 /* Social media icons in Header */
-.hero img {
-	width: 30px;
-	margin:10px 5px;
-}
-.hero .container {
-	margin-top:100px;
+.hero {
+	img {
+		width: 30px;
+		margin:10px 5px;
+	}
+	.container {
+		margin-top:100px;
+	}
 }
 
 /*== PROFILE SECTION ==*/
 .about,
-.profile,
-.gallery,
-.contact {
+.gallery {
 	padding: 20px 0;
 }
 
 .profile {
+	width: 100%;
 	background: #fff;
-	padding:75px 0 85px 0;
+	padding:0;
 	margin:0;
 }
 .prSide {
-	line-height: 1.75;
-	background: #FFF;
-	width: 62%;
-	padding: 10px;
-	margin-right: 5%;
-	float: left;
+	@include profileText(62%);
 }		/* Personal Intro Text */
-.profile img {
-	width: 25%;
-	border-radius: 8px;
-	margin: 30px 0 0 10px;
-	float: left;
+.prImage {
+	@include profileImg(38%);
+		img {
+			-webkit-opacity:0;
+		}
 }
 
+.blurb {
+	@include blurb(#FFF, 20px, 50px, 50px);
+}
 
 /* ABOUT SECTION: 3-PART DIV WITH ICONS */
 .about {
@@ -52,70 +100,133 @@
 	line-height: 1.75;
 	padding:50px 0 40px 0;
 	color:#FFF;
+		img {
+			width: 100px;
+			padding-bottom:5px;
+			-webkit-filter:invert(100%);
+		}
+		.about1,
+		.about2,
+		.about3 {
+			@include about(33%);
+		}
 }
-.about1,
-.about2,
-.about3 {
-	width: 33%;
-	padding:25px;
-	text-align: center;
-	float: left;
-}
+
 .about2 {
 	border-left:1px dotted grey;
 	border-right:1px dotted grey;
 }
-.about img {
-	width: 100px;
-	padding-bottom:5px;
-	-webkit-filter:invert(100%);
-} /* Icon Dimensions*/
 
 /*== GALLERY SECTION ==*/
+
+.galleryTitle {
+	@include blurb(#FFF, 20px, 50px, 10px);
+}
+
 .gallery1,
 .gallery2,
-.gallery3,
+.gallery3 {
+	@include gallery(33%, 0, 45px)
+}
+
 .gallery4,
 .gallery5,
 .gallery6 {
-	width: 33%;
-	padding:45px 10px;
-	float: left;
+	@include gallery(33%, 45px, 45px);
 }
 .gallery {
 	background: #FFF;
 	padding: 45px 0 35px 0;
 	text-align: center;
-}
-.gallery img {
-	width: 75%;
-	border-radius: 8px;
+		img {
+			@include galleryItem(75%);
+		}
 }
 
 /*== CONTACT SOCIAL MEDIA SECTION ==*/
 
 .contact {
+	width: 100%;
 	background: rgba(0,0,0,0.1);
 	text-align: center;
-}
-.contact h2 {
-	font-size: 18px;
-	font-weight: 400;
-	color:#FFF;
-	text-align: center;
+
+		.contactSocial {
+			width: 62%;
+			float: left;
+			padding: 67.5px 0;
+			background:rgba(255,255,255,0.1);
+		}
+		.contactForm {
+			width: 38%;
+			float: left;
+			padding: 30px 50px;
+			background:#E0D8CE;
+		}
+
+		h2 {
+			font-size: 18px;
+			font-weight: 400;
+			color:#FFF;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		img {
+			width: 50px;
+			margin:10px 20px;
+		}
+
+		form.contact {
+			width: 60%;
+			margin: 0 auto;
+			padding: 50px 0;
+			border-radius: 5px;
+			font-family: $font-special;
+			font-size: 14px;
+			background:none;
+		}
+
+		input.firstName,
+		input.lastName,
+		input.email,
+		textarea.message {
+			display:block;
+			width: 100%;
+			color:#E3E3E3;
+			margin:0 0 20px 0;
+			padding:12px;
+			border: 1px solid #EEE;
+			border-radius: 2px;
+			background:none;
+				&:focus {
+					border-color: red;
+					box-shadow: none;
+					outline:none;
+				}
+		}
+.submit {
+	display:block;
+	width: 100%;
+	padding:10px 0;
+	font-size: 16px;
+	font-weight: 200;
+	color:#e3e3e3;
 	text-transform: uppercase;
+	background: rgba(0,0,0,0.25);
+	border: 1px solid rgba(0,0,0,0.1);
+	border-radius: 3px;
+		&:hover {
+			background:rgba(255,255,255,0.65);
+			border: 1px solid rgba(255,255,255,0.1);			
+			color:#333;
+		}	
 }
-.contact img {
-	width: 50px;
-	margin:10px 20px;
-} /*Icon Dimensions*/
 
 /*== FOOTER SECTION (Copyright blurb) ==*/
 footer {
-	background: rgba(0,0,0,0.5);
-	font-size: 18px;
+	background: rgba(0,0,0,0.75);
+	font-size: 14px;
 	color: #FFF;
-	padding:1px 0;
+	padding-left:20px;
 }
 
 .container {
@@ -186,7 +297,7 @@ RESPONSIVE
 	.about1,
 	.about2,
 	.about3 {
-		float: none;
+		float:none;
 		width: 85%;
 		padding:25px;
 		margin: 0 auto;
@@ -207,7 +318,7 @@ RESPONSIVE
 		background: url(images/scenic/trees-1-bw-mobile.jpg);
 		background-attachment:scroll;
 		background-repeat: no-repeat;
-	}
+		}
 		.container {
 			width: 90%;
 			margin: 0 auto;
@@ -245,11 +356,7 @@ RESPONSIVE
 			margin: 0 auto;
 			background: rgba(176,196,222,0.5);
 		}
-		.about1,
-		.about2,
-		.about3 {
-			width: 95%;
-		}
+		
 		.hero img {
 			width: 25px;
 			margin:10px 5px;
@@ -262,3 +369,4 @@ RESPONSIVE
 			font-size: 12px;
 		}
 	}
+}
